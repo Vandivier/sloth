@@ -1,12 +1,13 @@
 {
   "name": "sloth-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a dead simple Chron cli tool for Node",
   "bin": {
     "sloth": "./index.js"
   },
   "main": "index.js",
   "scripts": {
+    "immediately": "sloth .1 \"npm run say-hello\" true",
     "start": "sloth .1 \"npm run say-hello\"",
     "say-hello": "node hello.js"
   },

@@ -6,14 +6,20 @@
 
 const shell = require('shelljs');
 
+let args = process.argv.slice(2);
+let iMinutesToWait = args[0];
+let sScriptToRun = args[1];
+let bCallImmediately = args[2];
+
 main();
 
 async function main() {
-    let args = process.argv.slice(2);
-    let iMinutesToWait = args[0];
-    let sScriptToRun = args[1];
-
+    if (bCallImmediately) iterate();
     setInterval(function () {
-        if (shell.exec(sScriptToRun).code !== 0) console.log('\r\n\Sloth error: Unable to run the identified command.\r\n');
+        iterate();
     }, iMinutesToWait * 60 * 1000);
+}
+
+function iterate() {
+    if (shell.exec(sScriptToRun).code !== 0) console.log('\r\n\Sloth error: Unable to run the identified command.\r\n');
 }

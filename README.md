@@ -3,14 +3,22 @@
 Sloth is a dead simple Chron cli tool for Node.
 
 Install Sloth as a dependency:
+
 `npm install --save sloth-cli`
 
 Then pass Sloth the length of time it should wait until running your command, and what command to run:
+
 `sloth 5 "npm run my-script"`
+
 or set it up in your `package.json` like:
+
 `"start": "sloth .1 \"npm run my-script\""`
 
-That's it! By default you pass a number of minutes. You can pass a decimal number. Support for other stuff is TODO.
+That's it! By default you pass a number of minutes. You can pass a decimal number.
+
+By default the slothed script will only run after the specified length of time. If you want it to also run once immediately, pass `true` like this:
+
+`"start": "sloth .1 \"npm run my-script\" true"`
 
 Terminate the loop by pressing `ctrl + c`. You may have to press that twice. It's not graceful.
 
