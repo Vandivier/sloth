@@ -7,9 +7,8 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "sloth",
-    "say-hello": "node hello.js",
-    "6-second-test": "sloth .1 'npm run say-hello'"
+    "start": "sloth .1 \"npm run say-hello\"",
+    "say-hello": "node hello.js"
   },
   "repository": {
     "type": "git",

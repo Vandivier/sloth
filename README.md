@@ -6,18 +6,17 @@ Install Sloth as a dependency:
 `npm install --save sloth-cli`
 
 Then pass Sloth the length of time it should wait until running your command, and what command to run:
-`sloth 5 "npm start"`
+`sloth 5 "npm run my-script"`
+or set it up in your `package.json` like:
+`"start": "sloth .1 \"npm run my-script\""`
 
-That's it! By default you pass a number of minutes. Support for other stuff is TODO.
+That's it! By default you pass a number of minutes. You can pass a decimal number. Support for other stuff is TODO.
 
 Terminate the loop by pressing `ctrl + c`. You may have to press that twice. It's not graceful.
 
 # Contributing
 
 PRs are welcome, and you can always file an issue for features requests, as well as, uh, an issue.
-
-If you clone source try running the following command to see how you can test out changes:
-`npm run 5-second-test`
 
 # TODO
 
