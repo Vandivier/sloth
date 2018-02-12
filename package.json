@@ -2,9 +2,14 @@
   "name": "sloth-cli",
   "version": "1.0.0",
   "description": "a dead simple Chron cli tool for Node",
+  "bin": {
+    "sloth": "./index.js"
+  },
   "main": "index.js",
   "scripts": {
-    "start": "node ."
+    "start": "sloth",
+    "say-hello": "node hello.js",
+    "6-second-test": "sloth .1 'npm run say-hello'"
   },
   "repository": {
     "type": "git",
@@ -18,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/Vandivier/sloth/issues"
   },
-  "homepage": "https://github.com/Vandivier/sloth#readme"
+  "homepage": "https://github.com/Vandivier/sloth#readme",
+  "dependencies": {
+    "shelljs": "^0.8.1"
+  }
 }
