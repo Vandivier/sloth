@@ -1,0 +1,22 @@
+{
+  "name": "sloth",
+  "version": "1.0.0",
+  "description": "a dead simple Chron cli tool for Node",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vandivier/sloth.git"
+  },
+  "keywords": [
+    "chron"
+  ],
+  "author": "John Vandivier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Vandivier/sloth/issues"
+  },
+  "homepage": "https://github.com/Vandivier/sloth#readme"
+}
