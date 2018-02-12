@@ -10,6 +10,7 @@ let args = process.argv.slice(2);
 let iMinutesToWait = args[0];
 let sScriptToRun = args[1];
 let bCallImmediately = args[2];
+let bLogTimeWhenRun = args[3];
 
 main();
 
@@ -22,4 +23,5 @@ async function main() {
 
 function iterate() {
     if (shell.exec(sScriptToRun).code !== 0) console.log('\r\n\Sloth error: Unable to run the identified command.\r\n');
+    if (bLogTimeWhenRun) console.log('\r\nSloth iteration last completed at: ' + new Date() + '\r\n');
 }

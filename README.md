@@ -20,6 +20,10 @@ By default the slothed script will only run after the specified length of time. 
 
 `"start": "sloth .1 \"npm run my-script\" true"`
 
+You can also have Sloth log the last iteration time by passing true as a fifth argument:
+
+`"start": "sloth .1 \"npm run my-script\" false true"`
+
 Terminate the loop by pressing `ctrl + c`. You may have to press that twice. It's not graceful.
 
 # Contributing
