@@ -1,5 +1,5 @@
 {
-  "name": "sloth",
+  "name": "sloth-cli",
   "version": "1.0.0",
   "description": "a dead simple Chron cli tool for Node",
   "main": "index.js",
